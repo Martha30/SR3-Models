@@ -79,7 +79,7 @@ class Renderer(object):
             self.pixels[int(x)][int(y)] = color or self.curr_color
 
     
-    def glPoint_NDC(self, x, y, color = None): 
+    def glPoint1(self, x, y, color = None): 
         x = int( (x + 1) * (self.viewportWidth / 2) + self.viewportX )
         y = int( (y + 1) * (self.viewportHeight / 2) + self.viewportY)
         if x < self.viewportX or x >= self.viewportX + self.viewportWidth or y < self.viewportY or y >= self.viewportY + self.viewportHeight:
